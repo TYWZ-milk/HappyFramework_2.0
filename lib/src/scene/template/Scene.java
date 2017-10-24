@@ -1,13 +1,13 @@
-package scene;
+package scene.template;
 
 import application.Printable;
 import entity.Entity;
+import scene.Actionable;
 
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.Vector;
 
-public class Scene implements Printable, Actionable{
+public abstract class Scene implements Printable, Actionable {
 
     private String sceneName;
     private HashMap<String, Entity> children;
@@ -15,7 +15,7 @@ public class Scene implements Printable, Actionable{
 
 
 
-    public Scene(){
+    private Scene(){
         sceneName = "Default";
     }
 
@@ -24,10 +24,6 @@ public class Scene implements Printable, Actionable{
 
     }
 
-    @Override
-    public void action() {
-        print("Scene " + sceneName +" Started");
-    }
 
     public String addChild(Entity entity) {
         String key = entity.getClass().toString() + " " +id++;

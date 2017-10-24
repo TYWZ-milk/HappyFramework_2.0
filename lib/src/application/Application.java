@@ -1,23 +1,17 @@
 package application;
 
-
-public class Application implements Printable{
-
-    public Application(){
-        print("Initiated");
+abstract class Application implements Printable, Startable{
+    Application(){
+        print("Constructing application and initializing resources....");
     }
 
-    public void start(){
-        print("Started");
-
-
-
-    }
+//    public void start(){
+//        print("Story starts!");
+//    }
 
     public void end(){
-        print("Ended");
+        print("Release resources. Story ends.");
     }
-
 }
 
 
