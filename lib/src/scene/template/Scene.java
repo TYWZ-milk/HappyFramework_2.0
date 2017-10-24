@@ -13,9 +13,8 @@ public abstract class Scene implements Printable, Actionable {
     private HashMap<String, Entity> children;
     private static long id = 0;
 
+    public Scene(){
 
-
-    private Scene(){
         sceneName = "Default";
     }
 
